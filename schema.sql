@@ -13,7 +13,3 @@ CREATE TABLE products (
     name_that_reference VARCHAR(100) NOT NULL,
     PRIMARY KEY (item_id)
 );
-
--- To Add to DB:
--- INSERT INTO products(product_name, department_name, price, stock_quantity, name_that_reference)
--- VALUES
