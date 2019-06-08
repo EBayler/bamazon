@@ -67,7 +67,7 @@ var askForID = function () {
         }
         // select all rows where ID = user's input
     }).then((answer) => {
-        connection.query('SELECT item_id, product_name, department_name, price, stock_quantity FROM products WHERE ?', {
+        connection.query('SELECT item_id, product_name, department_name, price, stock_quantity, product_sales FROM products WHERE ?', {
             item_id: answer.itemID
         }, (err, res) => {
             // confirm with user that this is the product they'd like to purchase
