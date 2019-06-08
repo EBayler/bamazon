@@ -58,10 +58,10 @@ var askForID = function () {
         message: 'Enter the ID of the item you would like to purchase:',
       
         validate: (value) => {
-            if (!isNaN(value) && (value > 0 && value <= 18)) {
+            if (!isNaN(value) && (value > 0 && value <= 38)) {
                 return true;
             } else {
-                console.log(chalk.red(' => Please enter a number from 1-18'));
+                console.log(chalk.red(' => Please enter a number from 1-38'));
                 return false;
             }
         }
