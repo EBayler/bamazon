@@ -1,3 +1,5 @@
+// require("dotenv").config();
+
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 // color code/ make it look pretty w/(apparently works best with Cmder NOT Bash but oh well):
@@ -9,9 +11,25 @@ var connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: '45Vincent98',
+    password: '',
     database: 'bamazon_db'
 });
+
+// const db = require('db');
+
+// db.connection = mysql.createConnection({
+//     host: 'localhost',
+//     port: 3306,
+//     user: 'root',
+//     password: process.env.DB_PASS,
+//     database: 'bamazon_db'
+// });
+
+// const result = dotenv.config()
+// if (result.error) {
+//     throw result.error
+// }
+// console.log(result.parsed);
 
 connection.connect((err) => {
     if (err) throw err;
@@ -36,7 +54,7 @@ var displayItems = function () {
     connection.query(`SELECT * FROM products`, (err, res) => {
         var listTable = new Table({
             head: ['Item ID', 'Product Name', 'Reference','Price'],
-            colWidths: [10, 45, 45, 12]
+            colWidths: [10, 50, 45, 12]
         });
 
         for (var i = 0; i < res.length; i++) {
