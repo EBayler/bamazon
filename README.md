@@ -16,12 +16,12 @@
 #### Demos:
 1. Main Demo:
 
-![](bamazon1.gif)
+![](gifDemos/bamazon1.gif)
 
 2. Out of Stock Warning Demo:
 
-![](bamazon2.gif)
+![](gifDemos/bamazon2.gif)
 
 3. Database Update:
 
-![](bamazon3.gif)
+![](gifDemos/bamazon3.gif)
