@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 var chalk = require('chalk');
@@ -7,6 +9,6 @@ var connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: '',
+    password: process.env.DB_PASS,
     database: 'bamazon_db'
 });
